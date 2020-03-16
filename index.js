@@ -16,7 +16,7 @@ client.on('message', async message => {
         if(words.content.includes(message.content)) return message.delete;
         let AccWords = await words.edit(`${words.content}, ${message.content}`);
         OMessage.edit(`**Skribble Words:**\n\`\`\`${AccWords}\`\`\``)
-        console.log(`${message.author.user.tag} Added ${message.content}`);
+        console.log(`${message.author.tag} Added ${message.content}`);
     }
 });
 
